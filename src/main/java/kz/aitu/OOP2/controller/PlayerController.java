@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping("/players")
 public class PlayerController {
 
-    private PlayerDAO dao = new PlayerDAO();
+    private final PlayerDAO dao = new PlayerDAO();
 
     @GetMapping
     public List<Player> getPlayers() throws Exception {

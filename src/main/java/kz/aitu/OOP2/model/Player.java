@@ -23,11 +23,6 @@ public class Player extends Person {
         this.age = age;
     }
 
-    @Override
-    public String getRole() {
-        return "PLAYER";
-    }
-
     // equals based on id (logical equality)
     @Override
     public boolean equals(Object o) {

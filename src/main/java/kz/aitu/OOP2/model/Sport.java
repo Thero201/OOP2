@@ -4,31 +4,11 @@ import java.util.Objects;
 
 public class Sport {
 
-    private int id;
-    private String name;
-
-    public Sport() {}
+    private final int id;
+    private final String name;
 
     public Sport(int id, String name) {
         this.id = id;
-        this.name = name;
-    }
-
-    // getters
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    // setters
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 
@@ -36,8 +16,7 @@ public class Sport {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Sport)) return false;
-        Sport sport = (Sport) o;
+        if (!(o instanceof Sport sport)) return false;
         return id == sport.id;
     }
 
