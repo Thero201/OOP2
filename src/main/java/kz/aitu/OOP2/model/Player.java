@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class Player extends Person {
 
-    private int age;
-
-    public Player() {}
+    private final int age;
 
     public Player(int id, String name, int age) {
         super(id, name);
@@ -16,11 +14,6 @@ public class Player extends Person {
     // getter
     public int getAge() {
         return age;
-    }
-
-    // setter
-    public void setAge(int age) {
-        this.age = age;
     }
 
     // equals based on id (logical equality)
