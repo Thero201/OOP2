@@ -30,6 +30,8 @@ public class PlayerController {
     public String test() {
         return "OK";
     }
+
+
     @GetMapping("/dbtest")
     public String dbTest() throws Exception {
         dao.testConnection();
