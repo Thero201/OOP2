@@ -4,12 +4,18 @@ import java.util.Objects;
 
 public class Player extends Person {
 
-    private final int age;
+    private Integer age;
 
     public Player(int id, String name, int age) {
         super(id, name);
         this.age = age;
     }
+
+
+    // setter
+    public void setName(String name) { this.name = name; }
+    public void setAge(Integer age) { this.age = age; }
+
 
     // getter
     public int getAge() {

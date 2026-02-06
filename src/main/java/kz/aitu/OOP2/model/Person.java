@@ -2,10 +2,10 @@ package kz.aitu.OOP2.model;
 
 public abstract class Person {
 
-    protected int id;
+    protected Integer id;
     protected String name;
 
-    public Person(int id, String name) {
+    public Person(Integer id, String name) {
         this.id = id;
         this.name = name;
     }

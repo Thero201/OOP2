@@ -37,5 +37,10 @@ public class PlayerController {
         dao.testConnection();
         return "DB OK";
     }
+    @PutMapping("/{id}")
+    public void updatePlayer(@PathVariable int id,
+                             @RequestBody Player player) throws Exception {
+        dao.updatePlayer(id, player);
+    }
 
 }

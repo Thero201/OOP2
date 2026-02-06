@@ -25,9 +25,26 @@ public class PlayerDAO {
         conn.close();
     }
 
+    public void updatePlayer(int id, Player player) throws Exception {
+
+        String sql = "UPDATE players SET name = ?, age = ? WHERE id = ?";
+
+        Connection conn = DatabaseConnection.getConnection();
+        PreparedStatement ps = conn.prepareStatement(sql);
+
+        ps.setString(1, player.getName());
+        ps.setInt(2, player.getAge());   // если age Integer → проверяй ниже
+        ps.setInt(3, id);
+
+        int updatedRows = ps.executeUpdate();
+        System.out.println("Updated rows: " + updatedRows);
+
+        conn.close();
+    }
+
     public List<Player> getAllPlayers() throws Exception {
         List<Player> players = new ArrayList<>();
-        String sql = "SELECT * FROM players";
+        String sql = "SELECT * FROM players ORDER BY id";
 
         Connection conn = DatabaseConnection.getConnection();
         Statement st = conn.createStatement();
